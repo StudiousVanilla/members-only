@@ -8,10 +8,9 @@ const session = require("express-session");
 const passport = require("passport");
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
+const flash = require('connect-flash')
 
-console.log(process.env);
-
-// db set yp
+// db set up - uses enviroment variable
 mongoose.connect( process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology: true})
 
 // route initialisation 
@@ -40,11 +39,15 @@ app.use(session({secret:'cat', saveUninitialized: true, resave: false}));
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Connect flash
+app.use(flash())
+
 
 
 
 // allows views access to curentUser and error variables
 app.use(function(req, res, next) {
+  res.locals.flash = req.flash('error')
   res.locals.currentUser = req.user;
   next();
 });

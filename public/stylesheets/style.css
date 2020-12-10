@@ -347,3 +347,18 @@ button:hover{
   color: white;
   background-color: rgb(228, 89, 89);
 }
+
+.flash-errors-container{
+  top: 14%;
+  left: 0%;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flash-error{
+  width: fit-content;
+  padding: 0px 10px;
+}

@@ -10,7 +10,7 @@ passport.use( new LocalStrategy({usernameField: 'email'},
           if(err){
           return done(err);
           }
-          // if there is no usernqme found in db
+          // if there is no username found in db
           if(!user){
               return done(null, false, { msg: 'Incorrect username'});
           } 

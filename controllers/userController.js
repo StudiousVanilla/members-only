@@ -108,12 +108,19 @@ const postUserSignUP = [
 
 // preforms an authentication check on the username and password submitted in the post request
 const postUserLogin = (req, res, next) =>{
+    passport.authenticate('local', {
+        successRedirect: '/user',
+        failureRedirect: '/login',
+        failureFlash: 'Incorrect Username or Password'
+    }, 
+    )
     
-    passport.authenticate('local', { successRedirect: '/user',
-                                   failureRedirect: '/login'
-                                   })
+ 
+
     (req, res, next);
 }
+
+
 
 // Logs out user and redirects to login page
 const logoutUser = (req, res) =>{

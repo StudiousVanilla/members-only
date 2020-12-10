@@ -8,6 +8,13 @@
 
     <%- include('./partials/nav.ejs')  %> 
 
+    <% if(flash){ %>
+      <div class="errors-container flash-errors-container">
+        <p class="error flash-error"><%=flash%></p>
+      </div>
+    <% } %> 
+
+
     <div class="centre-container">
       <form class="login-form" action="/login" method="POST" id="login-form">
           <div class="inner-form">

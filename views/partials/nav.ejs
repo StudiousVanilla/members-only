@@ -1,0 +1,30 @@
+<nav class="navbar">
+    <% if(!currentUser){ %>
+        <a href="/">
+            <button class="submit-btn member-btn nav-btn" type="button">
+                Login
+            </button>
+        </a>
+        <a href="/sign-up">
+            <button class="submit-btn member-btn nav-btn" type="button">
+                Sign up
+            </button>
+        </a>
+    <%} else {%>
+        <a href="/user/<%=currentUser.id%>">
+            <button class="submit-btn member-btn nav-btn" type="button">
+                Messages
+            </button>
+        </a>
+        <a href="/user/<%=currentUser.id%>/create-message"">
+            <button class="submit-btn member-btn nav-btn" type="button">
+                Create a message
+            </button>
+        </a>
+        <a href="/logout"">
+            <button class="submit-btn member-btn nav-btn logout-btn" type="button">
+                Logout
+            </button>
+        </a>
+    <% } %> 
+</nav>

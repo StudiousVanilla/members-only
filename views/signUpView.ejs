@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Sign Up</title>
+</head>
+<body>
+
+    <%- include('./partials/nav.ejs')  %>
+
+    <%- include('./partials/dataError.ejs')  %> 
+
+    <div class="centre-container">
+        <form class="sign-up-form" action="/sign-up" method="POST" id="sign-up-form">
+            <div class="inner-form">
+                <div class="form-input">
+                    <label for="fName">First Name</label>
+                    <input type="text" name="fName" id="fName">
+                </div>
+                <div class="form-input">
+                    <label for="sName">Second Name</label>
+                    <input type="text" name="sName" id="sNAme">
+                </div>
+                <div class="form-input">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="form-input">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <button class="submit-btn" type="submit">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+    <%- include('./partials/footer.ejs')  %> 
+
+</body>
+</html>

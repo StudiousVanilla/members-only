@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>Message-Board</title>
+</head>
+<body>
+
+    <%- include('./partials/nav.ejs')  %>
+
+    <main class="message-board">
+        <% messages.forEach(message=>{ %>
+            <div class="message-container">
+                <p class="message message-title"><%= message.title  %> </p>
+                <p class="message message-date"><%= message.date.toLocaleString()  %> </p>
+                <p class="message message-content"><%= message.message  %> </p>
+                <div class="delete-and-user-container">
+                    <%if(currentUser.admin){%>
+                        <!-- This form has its method overridden so that it can trigger a DELETE request-->
+                        <form action="/user/<%=currentUser.id%>/<%=message.id%>/delete?_method=DELETE" method="POST" class="delete-btn-form">
+                            <button class="delete-btn">
+                                <span class="material-icons">delete</span>
+                            </button>
+                        </form>
+                    <%}%>
+                    <% if(currentUser.membership){%>
+                        <div class="message-user-container">
+                            <p class="message message-user">
+                                <%= message.userID%>
+                            </p>
+                        </div>
+                    <%} else{ %>
+                        <div class="message-user-container">
+                            <p class="message message-user">Members only</p>
+                        </div>
+                    <% } %>    
+                </div>
+            </div>
+       <% }) %> 
+    </main>
+
+    <%- include('./partials/footer.ejs')  %> 
+</body>
+</html>
+
+<!--
+
+    message.id is the key for deleting messages
+    
+-->

@@ -1,0 +1,349 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.navbar{
+  height: 7vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #eff2f1;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #eff2f1;
+}
+
+.centre-container{
+  height: 80vh;
+  width: 30vw;
+  min-width: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.sign-up-form, .login-form, .message-form{
+  height: 80%;
+  width: 100%;
+  font-weight: 400;
+  color: #6b9ac4;
+  background-color: #eff2f1;
+  border-radius: 10px;
+  border: 1px solid #d1dce0;
+}
+
+.login-form{
+  height: 50%;
+}
+
+.inner-form{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 2.5vh;
+}
+
+.form-input{
+  height: 15%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-input label{
+  margin-bottom: 10px;
+}
+
+.form-input input{
+  width: 80%;
+  line-height: 3vh;
+  font-size: 2vh;
+  border-radius: 8px;
+  border: none;
+}
+
+.submit-btn{
+  padding: 5px 10px;
+  color: white;
+  background-color: #6b9ac4;
+  border: none;
+  border-radius: 10px;
+}
+
+.message-input{
+  height: 50%;
+}
+
+.message-text{
+  width: 90%;
+  height: 500px;
+  font-size: 2vh;
+  border: none;
+  border-radius: 10px;
+}
+
+.update-form{
+  height: 50vh;
+  width: 100%;
+  padding-bottom: 20vh;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+  min-width: 310px;
+}
+
+.member-btn, .admin-btn{
+  width: 45%;
+  min-width: 140px;
+  background-color: #6B9AC4;
+}
+
+.admin-btn{
+  background-color: #67af99
+}
+
+.neg-btn{
+  width: 45%;
+  background-color: #8f2d56;
+}
+
+.return-link{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+button:hover{
+  transform: scale(1.1);
+}
+
+.prompt{
+  display: flex;
+  justify-content: center;
+  font-size: 1em;
+  min-width: 485px;
+  margin-bottom: 10px;
+}
+
+.message-board{
+    width: 95%;
+    margin: auto auto 100px auto;
+    padding: 5vh;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    gap: 3vh;
+}
+
+.message-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 15px 10px 20px;
+  margin-bottom: 30px;
+  border-right: 3px solid #EFF2F1;
+}
+
+.message-container:hover{
+  transform: scale(1.1);
+  border-color: #f4b942;
+}
+
+.message-title{
+  padding: 2px 10px;
+  font-size: 3vh;
+  font-weight: 700;
+  background-color: #f4b942;
+  box-shadow: -4px 4px #c9caca;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.message-date{
+  font-size: 1vh;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.message-content{
+  height: 90%;
+  margin: 10px 0px 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vh;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.delete-and-user-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-between;
+}
+
+.message-user-container{
+  height: 100%;
+  width: fit-content;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.message-user{
+  height: fit-content;
+  width: fit-content;
+  padding: 1px 5px;
+  font-size: 1.5vh;
+  font-weight: 600;
+  background-color: #a9bccc;
+}
+
+.delete-btn-form{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.delete-btn{
+  height: fit-content;
+  font-size: 1em;
+  font-weight: 800;
+  color: #8f2d56;
+  border: none;
+  background-color: transparent;
+}
+
+.footer-btn{
+  width: fit-content;
+  font-size: 1.5em;
+}
+
+.nav-btn{
+  background-color: #7698B3;
+}
+
+.logout-btn{
+  background-color: #8f2d56;
+}
+
+.errors-container{
+  position: fixed;
+  top: 24%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: auto;
+  z-index: -1;
+}
+
+.error{
+  margin-bottom: 50px;
+  padding: 2px 10px;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgb(228, 89, 89);
+}

@@ -1,0 +1,17 @@
+<nav class="footer">
+    <% if(currentUser){ %>
+        <% if(!currentUser.membership){%>
+            <a href="/user/<%=currentUser.id%>/member">
+                <button class="submit-btn member-btn footer-btn" type="button">
+                    Become a Member
+                </button>
+            </a>
+        <%} else if(!currentUser.admin){%>
+            <a href="/user/<%=currentUser.id%>/admin">
+                <button class="submit-btn admin-btn footer-btn" type="button">
+                    Become an Admin
+                </button>
+            </a> 
+        <% } %> 
+    <%}%>  
+</nav>

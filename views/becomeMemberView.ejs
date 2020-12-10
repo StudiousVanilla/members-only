@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Become Member</title>
+</head>
+<body>
+    <%- include('./partials/nav.ejs')  %> 
+
+    <div class="centre-container">
+        <form action="/user/<%=currentUser.id%>/become-member?_method=PUT" method="POST" id="member-form" class="update-form">
+            <div class="inner-form">
+                <p class="prompt">So you found the secret club</p>
+                <p class="prompt">Want to join?</p>
+                <div class="btn-container">
+                    <button class="submit-btn member-btn" type="submit">
+                         Yes please!
+                    </button>
+                    <button class="submit-btn neg-btn" type="button">
+                        <a class="return-link" href="/user/<%=currentUser.id%>"> No, thanks</a>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <%- include('./partials/footer.ejs')  %> 
+    
+</body>
+</html>

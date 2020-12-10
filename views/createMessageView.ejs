@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Create Message</title>
+</head>
+<body>
+    <%- include('./partials/nav.ejs')  %>
+
+    <%- include('./partials/dataError.ejs')  %> 
+    
+    <div class="centre-container">
+        <form class="message-form" action="/user/<%=currentUser.id%>/create-message" method="POST" id="message-form">
+            <div class="inner-form">
+                <div class="form-input">
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" id="title" maxlength="42">
+                </div>
+                <div class="form-input message-input">
+                    <label for="message">Message:</label>
+                    <textarea class="message-text" name="message" form="message-form" maxlength="200">Enter text here...</textarea>
+                </div>
+                <button class="submit-btn" type="submit">Publish</button>
+            </div>
+        </form>
+    </div>
+
+    <%- include('./partials/footer.ejs')  %> 
+
+</body>
+</html>

@@ -35,7 +35,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // passport initialization
-app.use(session({secret:'cat', saveUninitialized: true, resave: false}));
+app.use(session({secret:process.env.PASSPORT_SECRET, saveUninitialized: true, resave: false}));
 app.use(passport.initialize());
 app.use(passport.session());
 

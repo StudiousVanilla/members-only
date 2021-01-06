@@ -369,6 +369,16 @@ button:hover{
   
 }
 
+@media only screen and (max-width:1450px){
+  .errors-container{
+    width: 25%;
+  }
+
+  .flash-errors-container{
+    width: 100%;
+  }
+}
+
 
 @media only screen and (max-width: 950px) {
   .navbar{
@@ -390,6 +400,7 @@ button:hover{
 
   .centre-container{
     width: 100%;
+    height: 70vh;
     min-width: 0;
     display: flex;
     justify-content: center;
@@ -398,7 +409,7 @@ button:hover{
 
   .login-form, .sign-up-form, .message-form{
     width: 90%;
-    height: 70%;
+    height: 90%;
     margin: 0 auto;
   }
 
@@ -407,8 +418,8 @@ button:hover{
   }
 
   .sign-up-form{
-    margin-top: 50px;
     height: 80%;
+    margin-top: -10%;
   }
 
   .form-input{
@@ -444,13 +455,18 @@ button:hover{
 
   .errors-container{
     position: static;
+    display: block;
+    width: auto;
     margin-top: 15px;
-    margin-bottom: -20%;
   }
 
   .error{
     margin-bottom: 0px;
     font-size: 1em;
+  }
+
+  .flash-error{
+    width: 100%;
   }
 
 }

@@ -228,7 +228,6 @@ button:hover{
     padding: 5vh;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-gap: 20px;
     gap: 3vh;
 }
 
@@ -361,4 +360,97 @@ button:hover{
 .flash-error{
   width: fit-content;
   padding: 0px 10px;
+}
+
+.admin-sign{
+  color: #8f2d56;
+  font-size: 1.35em;
+  font-weight: 700;
+  
+}
+
+
+@media only screen and (max-width: 950px) {
+  .navbar{
+    width: 100%;
+  }
+
+  .navbar a{
+    width: fit-content;
+  }
+  
+  .submit-btn, .member-btn, .nav-btn, .btn-container{
+    min-width: 80px;
+    font-size: 0.9em;
+  }
+
+  .create-btn{
+    width: fit-content;
+  }
+
+  .centre-container{
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .login-form, .sign-up-form, .message-form{
+    width: 90%;
+    height: 70%;
+    margin: 0 auto;
+  }
+
+  .login-form{
+    margin-top: 50px;
+  }
+
+  .sign-up-form{
+    margin-top: 50px;
+    height: 80%;
+  }
+
+  .form-input{
+    height: 15%;
+  }
+
+  .form-input label{
+    font-size: 1.25em;
+  }
+
+  .form-input input{
+    font-size: 1.25em;
+  }
+
+
+  .message-board{
+    padding: 5vh 1vh;
+    grid-template-columns: repeat(1,1fr);
+    gap: 4vh;
+  }
+
+  .message-user{
+    font-size: 0.9em;
+  }
+
+  .delete-btn span{
+    font-size: 1.5em;
+  }
+
+  .message-input{
+    height: 40%;
+  }
+
+  .errors-container{
+    position: static;
+    margin-top: 15px;
+    margin-bottom: -20%;
+  }
+
+  .error{
+    margin-bottom: 0px;
+    font-size: 1em;
+  }
+
 }

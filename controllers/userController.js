@@ -38,8 +38,8 @@ const renderBecomeAdmin = (req,res)=>res.render('becomeAdminView.ejs')
 const postUserSignUP = [
 
     // validation checks
-    body('fName').trim().exists().isLength({ min: 1 }).withMessage('A First name are required'),
-    body('sName').trim().exists().isLength({ min: 1 }).withMessage('A Second name are required'),
+    body('fName').trim().exists().isLength({ min: 1 }).withMessage('A First name is required'),
+    body('sName').trim().exists().isLength({ min: 1 }).withMessage('A Second name is required'),
     body('email').trim().exists().withMessage('An email address is required'),
     body('email').trim().isEmail().withMessage('Please enter a valid email address'),
     body('password').trim().isLength({min: 8}).withMessage('Password must be at least 8 characters long'),

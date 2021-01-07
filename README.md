@@ -1,6 +1,6 @@
-This web app was built to show proficency in using Node JS, the Express web application framework, and Mongo Databases.
+This web app was built to show proficency in using **Node JS**, the **Express web application framework**, and **Mongo Databases**.
 
-The web app uses the following technologies:
+**The web app uses the following technologies:**
 
 - Express
 - Mongoose to connect to a MongoDB
@@ -18,4 +18,8 @@ This backend application is a message board.
 
 This web app is optimsed for mobile.
 
-Made by Oisín Byrne - 2020
+Link to live demo - https://members-only-project.herokuapp.com/login
+
+[![Screenshot-2021-01-07-at-14-38-23.png](https://i.postimg.cc/RZWmtpt1/Screenshot-2021-01-07-at-14-38-23.png)](https://postimg.cc/G4n6wQq9)
+
+Made by Oisín Byrne - 2020 - https://studiousvanilla.github.io/portfolio/

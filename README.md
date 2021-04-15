@@ -22,4 +22,4 @@ Link to live demo - https://members-only-project.herokuapp.com/login
 
 [![Screenshot-2021-01-07-at-14-38-23.png](https://i.postimg.cc/RZWmtpt1/Screenshot-2021-01-07-at-14-38-23.png)](https://postimg.cc/G4n6wQq9)
 
-Made by Oisín Byrne - 2020 - https://studiousvanilla.github.io/portfolio/
+Made by Oisín Byrne - 2020 - https://www.oisinbyrne.me
